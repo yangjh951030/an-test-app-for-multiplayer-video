@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta  charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta  http-equiv="Content-Security-Policy" content="script-src 'self' unsafe-inline">
+        <title>多人视频</title>
+    </head>
+    <body>
+        <div id="inviteModal">
+            <div class="modalContent">
+                <p id="inviteMessage"></p>
+                <button id="refuseBtn">拒绝邀请</button>
+                <button id="agreeBtn">同意视频</button>
+            </div>
+        </div>
+        <div class="title">
+            <div id="titleName">多人视频聊天软件</div>
+            <div class="titleOperation">
+                <span id="smallBtn">缩小</span>
+                <span id="restoreBtn">还原</span>
+                <span id="closeBtn">&nbsp;X&nbsp;</span>
+            </div>
+        </div>
+        <div id="videoContent">
+            <video id="localVideo"  style="border:1px solid green"></video>
+        </div>
+        <div class="message">
+            <div id="messageContent"></div>
+            <div class="messageOperation">
+                <input id="userInput" type="text"  placeholder="请输入您的名字">
+                <button id="loginBtn">login</button>
+                <input id="messageInput" type="text"  placeholder="请输入信息，暂时只支持文字">
+                <button id="sendMessageBtn" >send message</button>
+                <input id="callInput" type="text"  placeholder="输入您要邀请的人">
+                <button id="callBtn">call him </button>
+                <button id="hangupBtn" >hang up</button>
+            </div>
+        </div>
+    </body>
+</html>
+<link type="text/css" rel="styleSheet"  href="client.css" />
+<script src="ipc.js" async></script>
+<script src="dom.js" async></script>
+<script src="client.js" async></script>

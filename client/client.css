@@ -1,0 +1,169 @@
+* {
+    box-sizing: border-box;
+}
+::-webkit-scrollbar{
+    background: gray;
+    width: 5px;
+    height: 5px;
+}
+::-webkit-scrollbar-track{
+    background: rgb(48, 47, 47);
+}
+::-webkit-scrollbar-thumb{
+    background: gray;
+    width: 5px;
+}
+body{
+    width: calc(100% - 10px);
+    height: calc(100vh - 20px);
+    min-height: 500px;
+    overflow: auto;
+}
+@keyframes circles{
+    from{
+        transform: scale(0) rotateZ(0deg);
+    }
+    to{
+        transform: scale(1) rotateZ(360deg);
+    }
+}
+#inviteModal{
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.6);
+    z-index:999;
+    animation: circles 0.5s linear;
+}
+.modalContent{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    left: 50%;
+    top: 50%;
+    width: 20%;
+    min-height: 100px;
+    padding: 10px;
+    border-radius: 10px;
+    background: white;
+    transform: translate(-50%,-50%);
+}
+#refuseBtn{
+    background: red;
+}
+#agreeBtn{
+    background: green;
+}
+.title{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(100%);
+    height: 30px;
+    top:0px;
+    left: 0px;
+    background: cadetblue;
+    color:black;
+    z-index: 999;
+    -webkit-app-region: drag; /* 设置可以拖拽*/
+}
+.titleOperation{
+    position: absolute;
+    right: 3px;
+}
+span{
+    cursor: pointer;
+    -webkit-app-region: no-drag; /* 设置不可以拖拽*/
+}
+#videoContent{
+    position: relative;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap:wrap;
+    top:40px;
+    width: 70%;
+    height: 92%;
+    min-height: 300px;
+    left:0%;
+    background: black;
+    overflow: auto;
+}
+video{ /* 暂时不知道如何设置*/
+    margin:5px;
+    width:200px;
+    height: 150px;
+    transform: rotateY(180deg);
+}
+.message{
+    position: relative;
+    left:71%;
+    top:40px;
+    width: 28%;
+    height: 92%;
+    min-height: 300px;
+    border:1px solid black;
+    border-radius: 4px;;
+}
+#messageContent{
+    position: absolute;
+    width: 100%;
+    top:0px;
+    height: 51%;
+    overflow: auto;
+    border-bottom: 2px solid black;
+    background: rgb(255,255,100);
+}
+.messageOperation{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 48%;
+    top:52%;
+    width: 100%;
+    padding: 5px;
+}
+input{
+    padding: 4px;
+    outline: none;
+    margin-top: 6px;
+}
+button{
+    padding: 4px ;
+    margin-top:6px;
+    outline: none;
+    border:none;
+    cursor: pointer;
+}
+button:hover{
+    box-shadow: 0px 0px 5px rgb(46, 45, 45) ;
+}
+#sendMessageBtn{
+    background: rgb(112, 112, 243);
+}
+#sendMessageBtn:hover{
+    background: rgb(58, 58, 214);
+}
+#callBtn{
+    background: rgb(4, 170, 4);
+}
+#callBtn:hover{
+    background: rgb(11, 134, 11);
+}
+#hangupBtn{
+    background: rgb(236, 7, 7);
+}
+#hangupBtn:hover{
+    background: rgb(226, 30, 30);
+}
+#loginBtn{
+    background: rgb(156, 6, 194);
+}
+#loginBtn:hover{
+    background: rgb(169, 31, 204);
+}
