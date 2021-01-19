@@ -23,9 +23,9 @@ function createWindow () {
   win.on('close',function(){
     app.quit(); // 主窗口关闭，所有的app停止运行
   })
-  win.setProgressBar(0.5) // 设置进度条
+  //win.setProgressBar(0.5) // 设置进度条
   // 打开开发者工具
-  win.webContents.openDevTools({detach:true})// 在新的地方打开窗口，而不是在窗口内
+  //win.webContents.openDevTools({detach:true})// 在新的地方打开窗口，而不是在窗口内
 }
 ipcMain.on('browserOperation',function(e,operation = 'small',browser = 'main'){ // 对窗口进行处理
   let whichBrowser;
